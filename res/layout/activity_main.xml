@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/chooseSurahTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:text="@string/chooseSurah"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:padding="5dp" 
+        android:textColor="@color/abs__holo_blue_light"
+         />
+    
+
+    <Spinner
+        android:id="@+id/allSurahSpinner"
+         style="@style/Widget.Sherlock.Light.Spinner.DropDown.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/chooseSurahTV"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="5dp" />
+    
+   <!-- 
+    <TextView
+        android:id="@+id/descriptionTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/allspinner"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/quranMapDescription" 
+        android:padding="5dp"
+        android:textColor="@color/white"/>
+    
+    
+
+    
+      --> 
+    
+     <Spinner
+        android:id="@+id/languageSpinner"
+        style="@style/Widget.Sherlock.Spinner.DropDown.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/allSurahSpinner"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:visibility="gone"
+         />
+
+     
+         
+
+    <Button
+        android:id="@+id/generalMapButton"
+        style="@style/Widget.Sherlock.Light.ActionButton.Overflow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/languageSpinner"
+        android:layout_marginTop="40dp"
+        android:text="@string/generalMap"
+        android:gravity="center"
+        android:padding="5dp" />
+     
+     
+
+
+</RelativeLayout>
