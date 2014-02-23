@@ -835,6 +835,12 @@ containing a value of this type.
          */
         public static final int abs__config_showMenuShortcutsWhenKeyboardPresent=0x7f050003;
         public static final int abs__split_action_bar_is_narrow=0x7f050001;
+        /** Enable automatic activity tracking
+         */
+        public static final int ga_autoActivityTracking=0x7f050006;
+        /** Enable automatic exception tracking
+         */
+        public static final int ga_reportUncaughtExceptions=0x7f050007;
     }
     public static final class color {
         public static final int abs__background_holo_dark=0x7f060000;
@@ -1432,7 +1438,7 @@ containing a value of this type.
         public static final int map=0x7f0c0004;
     }
     public static final class string {
-        public static final int about=0x7f09002e;
+        public static final int about=0x7f09002f;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abs__action_bar_home_description=0x7f090000;
@@ -1478,11 +1484,11 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f090009;
-        public static final int alBaqarah_TitleDialog=0x7f090032;
-        public static final int app_id=0x7f090028;
-        public static final int app_name=0x7f090029;
-        public static final int changeLanguage=0x7f09002f;
-        public static final int chooseSurah=0x7f09002c;
+        public static final int alBaqarah_TitleDialog=0x7f090033;
+        public static final int app_id=0x7f090029;
+        public static final int app_name=0x7f09002a;
+        public static final int changeLanguage=0x7f090030;
+        public static final int chooseSurah=0x7f09002d;
         public static final int com_facebook_choose_friends=0x7f09001e;
         public static final int com_facebook_dialogloginactivity_ok_button=0x7f09000f;
         public static final int com_facebook_internet_permission_error_message=0x7f090022;
@@ -1510,45 +1516,48 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_not_logged_in=0x7f090019;
         /**  Share Activity 
          */
-        public static final int facebookShareButton=0x7f09004a;
-        public static final int generalMap=0x7f09002d;
-        public static final int generalMapNameInEachLangauge=0x7f09004f;
-        public static final int generalMapURLOnFacebook=0x7f090050;
-        public static final int goalOfSurahLabel=0x7f090045;
-        public static final int hello_world=0x7f09002a;
-        public static final int map_image_extracted=0x7f090041;
-        public static final int menu_Details=0x7f090033;
-        public static final int menu_about=0x7f090036;
-        public static final int menu_exit=0x7f090037;
-        public static final int menu_extract=0x7f090039;
-        public static final int menu_home=0x7f090038;
-        public static final int menu_reset=0x7f090035;
-        public static final int menu_settings=0x7f09002b;
-        public static final int menu_share=0x7f090034;
-        public static final int message_feature_Not_Available_Dialog=0x7f090043;
-        public static final int moreInfoButton=0x7f09003b;
-        public static final int noCurrentMapExist=0x7f090030;
-        public static final int noCurrentMapExist_TitleDialog=0x7f090031;
-        public static final int quranMapDescription=0x7f090047;
+        public static final int facebookShareButton=0x7f09004b;
+        /** Replace placeholder ID with your tracking ID
+         */
+        public static final int ga_trackingId=0x7f090028;
+        public static final int generalMap=0x7f09002e;
+        public static final int generalMapNameInEachLangauge=0x7f090050;
+        public static final int generalMapURLOnFacebook=0x7f090051;
+        public static final int goalOfSurahLabel=0x7f090046;
+        public static final int hello_world=0x7f09002b;
+        public static final int map_image_extracted=0x7f090042;
+        public static final int menu_Details=0x7f090034;
+        public static final int menu_about=0x7f090037;
+        public static final int menu_exit=0x7f090038;
+        public static final int menu_extract=0x7f09003a;
+        public static final int menu_home=0x7f090039;
+        public static final int menu_reset=0x7f090036;
+        public static final int menu_settings=0x7f09002c;
+        public static final int menu_share=0x7f090035;
+        public static final int message_feature_Not_Available_Dialog=0x7f090044;
+        public static final int moreInfoButton=0x7f09003c;
+        public static final int noCurrentMapExist=0x7f090031;
+        public static final int noCurrentMapExist_TitleDialog=0x7f090032;
+        public static final int quranMapDescription=0x7f090048;
         /**  About activity 
          */
-        public static final int quranMapGoalLableString=0x7f090046;
+        public static final int quranMapGoalLableString=0x7f090047;
         /**  details activity 
          */
-        public static final int reasonOfNamingLabel=0x7f090044;
-        public static final int referancesLabelString=0x7f090048;
-        public static final int show_internet_settings_dialog_message=0x7f09004c;
-        public static final int show_internet_settings_dialog_negative_button=0x7f09004e;
-        public static final int show_internet_settings_dialog_positive_button=0x7f09004d;
-        public static final int show_internet_settings_dialog_title=0x7f09004b;
-        public static final int surahDescription=0x7f09003a;
-        public static final int surahMapDescription=0x7f09003d;
-        public static final int title_activity_about=0x7f090040;
-        public static final int title_activity_map_fullscreen=0x7f09003c;
-        public static final int title_activity_share=0x7f09003f;
-        public static final int title_activity_surah_details=0x7f09003e;
-        public static final int title_feature_Not_Available_Dialog=0x7f090042;
-        public static final int usefuLinksLabelString=0x7f090049;
+        public static final int reasonOfNamingLabel=0x7f090045;
+        public static final int referancesLabelString=0x7f090049;
+        public static final int show_internet_settings_dialog_message=0x7f09004d;
+        public static final int show_internet_settings_dialog_negative_button=0x7f09004f;
+        public static final int show_internet_settings_dialog_positive_button=0x7f09004e;
+        public static final int show_internet_settings_dialog_title=0x7f09004c;
+        public static final int surahDescription=0x7f09003b;
+        public static final int surahMapDescription=0x7f09003e;
+        public static final int title_activity_about=0x7f090041;
+        public static final int title_activity_map_fullscreen=0x7f09003d;
+        public static final int title_activity_share=0x7f090040;
+        public static final int title_activity_surah_details=0x7f09003f;
+        public static final int title_feature_Not_Available_Dialog=0x7f090043;
+        public static final int usefuLinksLabelString=0x7f09004a;
     }
     public static final class style {
         /** 

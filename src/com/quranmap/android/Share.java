@@ -21,6 +21,8 @@ import com.facebook.widget.LoginButton;
 import com.facebook.widget.ProfilePictureView;
 import com.facebook.widget.WebDialog;
 import com.facebook.widget.WebDialog.OnCompleteListener;
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.analytics.tracking.android.MapBuilder;
 
 
 
@@ -115,6 +117,22 @@ public class Share extends SherlockActivity {
 	 		    	//int idOfMap =getApplicationContext().getResources().getIdentifier(mapName, "drawable", getApplicationContext().getPackageName());
 	 			    // map = getResources().getDrawable(idOfMap);
 	 		        facebookFeedDialog(surahName, mapURL, description );
+	 		        
+	 		        //Google Analytic Track Event 
+	 		        //Here we want to track share on Facebook Event
+	 		       //https://developers.google.com/analytics/devguides/collection/android/v3/events
+	 		       EasyTracker easyTracker = EasyTracker.getInstance(getApplicationContext());
+
+	 		      // MapBuilder.createEvent().build() returns a Map of event fields and values
+	 		      // that are set and sent with the hit.
+	 		      easyTracker.send(MapBuilder
+	 		          .createEvent("ui_action",                  // Event category (required)
+	 		                       "button_press",               // Event action (required)
+	 		                       "facebook_share_button",      // Event label
+	 		                       Long.parseLong(surahNumber))  // Event value , 
+	 		          .build()
+	 		      );
+
 	 		    }
 	 		});
 	 		
@@ -488,4 +506,19 @@ public class Share extends SherlockActivity {
 		        System.out.println("In onCreate in Thread, showSettingsAlertForInternet()  after show");
 		      
 		    }
+		    
+		    
+		    
+			@Override
+			  public void onStart() {
+			    super.onStart();
+			    EasyTracker.getInstance(this).activityStart(this);  // Google Analytic
+			  }
+
+			@Override
+			  public void onStop() {
+			    super.onStop();
+			    EasyTracker.getInstance(this).activityStop(this);  // Google Analytic
+			  }
+
 }

@@ -7,6 +7,7 @@ import org.amr.arabic.ArabicUtilities;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+import com.google.analytics.tracking.android.EasyTracker;
 
 import android.os.Bundle;
 import android.text.Html;
@@ -96,6 +97,18 @@ public class About extends SherlockActivity{
 			
 	
 	}
+
+	@Override
+	  public void onStart() {
+	    super.onStart();
+	    EasyTracker.getInstance(this).activityStart(this);  // Google Analytic
+	  }
+
+	@Override
+	  public void onStop() {
+	    super.onStop();
+	    EasyTracker.getInstance(this).activityStop(this);  // Google Analytic
+	  }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

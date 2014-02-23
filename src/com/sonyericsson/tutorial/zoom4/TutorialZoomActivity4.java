@@ -37,6 +37,8 @@ import java.util.Locale;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.analytics.tracking.android.MapBuilder;
 import com.quranmap.android.About;
 import com.quranmap.android.MainActivity;
 import com.quranmap.android.R;
@@ -287,10 +289,24 @@ public class TutorialZoomActivity4 extends SherlockActivity {
 		
         case R.id.extract:
 			
-			//first check if API version support access to SD card or not
+		        //Google Analytic Track Event 
+		        //Here we want to track extract to sdCard Event
+		       //https://developers.google.com/analytics/devguides/collection/android/v3/events
+		       EasyTracker easyTracker = EasyTracker.getInstance(getApplicationContext());
+
+		       //first check if API version support access to SD card or not
         	if(Build.VERSION.SDK_INT > Build.VERSION_CODES.FROYO)
         	{
         		createExternalStoragePublicPicture(mapName, idOfMap);
+        		// MapBuilder.createEvent().build() returns a Map of event fields and values
+  		      // that are set and sent with the hit.
+  		      easyTracker.send(MapBuilder
+  		          .createEvent("ui_action",                   // Event category (required)
+  		                       "menu_action_press",           // Event action (required)
+  		                       "extract_toSdCard",            // Event label
+  		                       Long.parseLong(surahNumber))   // Event value , i.e surah number
+  		          .build()
+  		      );
         		
         	}else{
         		//display dialog indicate that version of android did not support required feature
@@ -462,5 +478,19 @@ public class TutorialZoomActivity4 extends SherlockActivity {
 				return language;
 
 			}
+    
+    
+	@Override
+	  public void onStart() {
+	    super.onStart();
+	    EasyTracker.getInstance(this).activityStart(this);  // Google Analytic
+	  }
+
+	@Override
+	  public void onStop() {
+	    super.onStop();
+	    EasyTracker.getInstance(this).activityStop(this);  // Google Analytic
+	  }
+
 
 }
