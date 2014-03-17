@@ -636,7 +636,6 @@ int string abs__share_action_provider_share_with 0x7f090006
 int string abs__shareactionprovider_share_with 0x7f090008
 int string abs__shareactionprovider_share_with_application 0x7f090009
 int string alBaqarah_TitleDialog 0x7f090033
-int string app_id 0x7f090029
 int string app_name 0x7f09002a
 int string changeLanguage 0x7f090030
 int string chooseSurah 0x7f09002d
@@ -666,6 +665,7 @@ int string com_facebook_usersettingsfragment_log_in_button 0x7f090017
 int string com_facebook_usersettingsfragment_logged_in 0x7f090018
 int string com_facebook_usersettingsfragment_not_logged_in 0x7f090019
 int string facebookShareButton 0x7f09004b
+int string facebook_appID 0x7f090029
 int string ga_trackingId 0x7f090028
 int string generalMap 0x7f09002e
 int string generalMapNameInEachLangauge 0x7f090050

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_id">135701976599269</string>
+    <string name="facebook_appID">799995593362533</string>
     <string name="app_name">خرائط القرآن</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">اعدادات</string>

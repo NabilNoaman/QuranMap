@@ -1485,7 +1485,6 @@ containing a value of this type.
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f090009;
         public static final int alBaqarah_TitleDialog=0x7f090033;
-        public static final int app_id=0x7f090029;
         public static final int app_name=0x7f09002a;
         public static final int changeLanguage=0x7f090030;
         public static final int chooseSurah=0x7f09002d;
@@ -1517,6 +1516,7 @@ containing a value of this type.
         /**  Share Activity 
          */
         public static final int facebookShareButton=0x7f09004b;
+        public static final int facebook_appID=0x7f090029;
         /** Replace placeholder ID with your tracking ID
          */
         public static final int ga_trackingId=0x7f090028;
