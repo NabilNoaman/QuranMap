@@ -157,6 +157,7 @@ public class TutorialZoomActivity4 extends SherlockActivity {
 	      */
 		 if(isGeneralMap){
 			 surahName = getResources().getString(R.string.generalMap);
+			 surahNumber = "0"; //0 refer to ar_all
 		 }
 		 
 	        getSherlock().getActionBar().setTitle(surahName);
@@ -294,9 +295,11 @@ public class TutorialZoomActivity4 extends SherlockActivity {
 		       //https://developers.google.com/analytics/devguides/collection/android/v3/events
 		       EasyTracker easyTracker = EasyTracker.getInstance(getApplicationContext());
 
+		       System.out.println("surahNumber:"+surahNumber);
 		       //first check if API version support access to SD card or not
         	if(Build.VERSION.SDK_INT > Build.VERSION_CODES.FROYO)
         	{
+        		
         		createExternalStoragePublicPicture(mapName, idOfMap);
         		// MapBuilder.createEvent().build() returns a Map of event fields and values
   		      // that are set and sent with the hit.
