@@ -1,5 +1,9 @@
 Quran Map is an Android application to summarizing the main goals and topics for each surah in the Holy Quran to visualize the big picture and then make it easier for understanding , memorizing and practicing.
 
+Quran Map puplished on Google Play @ next link
+
+[Download the free app](https://play.google.com/store/apps/details?id=com.quranmap.android)
+
 App start with Arabic version but we need to support all languages , so if you can help please join the team (Translator , Graphic Designer , Mind Map designer, Developer ,...etc).
 
 Contact details listed below.
