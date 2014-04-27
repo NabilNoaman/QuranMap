@@ -28,6 +28,7 @@ import com.google.analytics.tracking.android.MapBuilder;
 
 
 import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
@@ -415,16 +416,20 @@ public class Share extends SherlockActivity {
 		 private boolean isThereAreInternetConnection(){
 		    	ConnectivityManager manager = (ConnectivityManager)getSystemService(this.CONNECTIVITY_SERVICE);
 
+		    	//to avoid crash problem like next scenario 
+		    	//http://stackoverflow.com/questions/2753412/android-internet-connectivity-check-problem
+		    	NetworkInfo mobileNetworkInfo = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
 		        /*
 		         * 3G confirm
 		         */
-		        Boolean is3g = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).isConnected();// isConnectedOrConnecting();
+		        Boolean is3g = (mobileNetworkInfo == null) ? false : mobileNetworkInfo.isConnected();// isConnectedOrConnecting();
 
 		        System.out.println("In onCreate in Thread,checking internet ,is3g: "+is3g);
 		        /*
 		         * wifi confirm
 		         */
-		        Boolean isWifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnectedOrConnecting();
+		        NetworkInfo wifiNetworkInfo = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+		        Boolean isWifi = (wifiNetworkInfo == null) ? false : wifiNetworkInfo.isConnectedOrConnecting();
 		        System.out.println("In onCreate in Thread,checking internet ,isWifi: "+isWifi);
 
 		        if(is3g | isWifi)
