@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".SurahDetails" >
+
+    <TextView
+        android:id="@+id/goalOfSurahLabel"
+        android:labelFor="@+id/goalOfSurahTV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/goalOfSurahLabel" 
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/goalOfSurahTV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Goal Of Surah"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textColor="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/reasonOfNamingLabel"
+        android:labelFor="@+id/reasonOfNamingTV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/reasonOfNamingLabel" 
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/reasonOfNamingTV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Reason Of Naming"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textColor="@android:color/darker_gray"/>
+    
+    
+</LinearLayout>

@@ -1,0 +1,82 @@
+   <ScrollView
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@android:color/white"
+       tools:context=".About" >
+
+<LinearLayout 
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+  
+    <TextView
+        android:id="@+id/quranMapGoalLable"
+        android:labelFor="@+id/programDescribtionTV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/quranMapGoalLableString"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="20sp" />
+    
+    <TextView
+        android:id="@+id/programDescribtionTV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/quranMapDescription" />
+   
+       <TextView
+        android:id="@+id/referancesLabel"
+        android:labelFor="@+id/referancesList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/referancesLabelString"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="20sp"/>
+   
+       
+        <TextView
+        android:id="@+id/referancesList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Referances" />
+     
+      <TextView
+        android:id="@+id/usefuLinksLabel"
+        android:labelFor="@+id/usefuLinksList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/usefuLinksLabelString"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="20sp" />
+      
+      <TextView
+        android:id="@+id/usefuLinksList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="useful links"
+        android:linksClickable="true"/>
+
+     
+   </LinearLayout> 
+   
+        
+       
+     </ScrollView>
+     
+  

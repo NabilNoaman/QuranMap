@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">خرائط القرآن</string>
+    <string name="menu_settings">اعدادات</string>
+    <string name="chooseSurah">من فضلك أختار السورة</string>
+    <string name="generalMap">خريطة عامة</string>
+    <string name="about">عن البرنامج</string>
+    <string name="changeLanguage">تغير اللغة</string>
+    <string name="noCurrentMapExist">لايوجد خريطة للسورة الحالية وسيتم اضافتها قريبا بأذن الله تابعونا على صفحة خرائط القرآن على الفيس بوك</string>
+    <string name="noCurrentMapExist_TitleDialog">الخريطة غير متوفرة</string>
+    <string name="alBaqarah_TitleDialog">أختار الجزء</string>
+    <string name="menu_Details">تفاصيل</string>
+    <string name="menu_share">مشاركة</string>
+    <string name="menu_reset">الوضع الطبيعى</string>
+    <string name="menu_about">عن البرنامج</string>
+    <string name="menu_exit">خروج</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_extract">أستخرج الى كارت الذاكرة</string>
+    <string name="title_activity_surah_details">التفاصيل</string>
+    <string name="title_activity_share">مشاركة</string>
+    <string name="title_activity_about">عن خرائط القرآن</string>
+    <string name="map_image_extracted">تم استخراج الخريطة الحالية لكارت الذاكرة </string>
+    <string name="title_feature_Not_Available_Dialog">غير متوفرة</string>
+    <string name="message_feature_Not_Available_Dialog">الخاصية المطلوبة غير متوفرة فى النسخة الحالية للأندرويد الحالى على هذا الجهاز</string>
+
+    <!-- details activity -->
+    <string name="reasonOfNamingLabel">سبب تسمية السورة</string>
+    <string name="goalOfSurahLabel">الهدف من السورة</string>
+
+    <!-- About activity -->
+
+    <string name="quranMapGoalLableString">الهدف من خرائط القرآن</string>
+    <string name="quranMapDescription">خرائط تبسط وتجمع المواضيع الاساسية في كل سورة
+ممايعين القارئ على رسم الصورة الكلية للسورة
+مماييسر عليه التدبر والحفظ والعمل
+</string>
+    <string name="referancesLabelString">المراجع التى تم الاعتماد عليها فى بناء الخرائط</string>
+    <string name="usefuLinksLabelString">مواقع مفيدة</string>
+
+    <!-- Share Activity -->
+    <string name="facebookShareButton">شارك</string>
+    <string name="show_internet_settings_dialog_title">اعدادت الانترنت</string>
+    <string name="show_internet_settings_dialog_message">لا يوجد اتصال حالى بالانترنت و يجب ان تتصل بالانترنت لتتمكن من مشاركة خرائط سور القرآن هل تريد تشغيل الانترنت</string>
+    <string name="show_internet_settings_dialog_positive_button">نعم</string>
+    <string name="show_internet_settings_dialog_negative_button">لا</string>
+    <string name="generalMapNameInEachLangauge">ar_all</string>
+    <string name="generalMapURLOnFacebook">https://www.facebook.com/photo.php?fbid=394765480580902</string>
+
+    <string-array name="allSurahNames">
+        <item>الفاتحة</item>
+        <item>البقرة</item>
+        <item>آل عمران</item>
+        <item>النساء</item>
+        <item>المائدة</item>
+        <item>الأنعام</item>
+        <item>الأعراف</item>
+        <item>الأنفال</item>
+        <item>التوبة</item>
+        <item>يونس</item>
+        <item>هود</item>
+        <item>يوسف</item>
+        <item>الرعد</item>
+        <item>إبراهيم</item>
+        <item>الحجر</item>
+        <item>النحل</item>
+        <item>الإسراء</item>
+        <item>الكهف</item>
+        <item>مريم</item>
+        <item>طه</item>
+        <item>الأنبياء</item>
+        <item>الحج</item>
+        <item>المؤمنون</item>
+        <item>النور</item>
+        <item>الفرقان</item>
+        <item>الشعراء</item>
+        <item>النمل</item>
+        <item>القصص</item>
+        <item>العنكبوت</item>
+        <item>الروم</item>
+        <item>لقمان</item>
+        <item>السجدة</item>
+        <item>الأحزاب</item>
+        <item>سبأ</item>
+        <item>فاطر</item>
+        <item>يس</item>
+        <item>الصافات</item>
+        <item>ص</item>
+        <item>الزمر</item>
+        <item>غافر</item>
+        <item>فصلت</item>
+        <item>الشورى</item>
+        <item>الزخرف</item>
+        <item>الدخان</item>
+        <item>الجاثية</item>
+        <item>الأحقاف</item>
+        <item>محمد</item>
+        <item>الفتح</item>
+        <item>الحجرات</item>
+        <item>ق</item>
+        <item>الذاريات</item>
+        <item>الطور</item>
+        <item>النجم</item>
+        <item>القمر</item>
+        <item>الرحمن</item>
+        <item>الواقعة</item>
+        <item>الحديد</item>
+        <item>المجادلة</item>
+        <item>الحشر</item>
+        <item>الممتحنة</item>
+        <item>الصف</item>
+        <item>الجمعة</item>
+        <item>المنافقون</item>
+        <item>التغابن</item>
+        <item>الطلاق</item>
+        <item>التحريم</item>
+        <item>الملك</item>
+        <item>القلم</item>
+        <item>الحاقة</item>
+        <item>المعارج</item>
+        <item>نوح</item>
+        <item>الجن</item>
+        <item>المزمل</item>
+        <item>المدثر</item>
+        <item>القيامة</item>
+        <item>الإنسان</item>
+        <item>المرسلات</item>
+        <item>النبأ</item>
+        <item>النازعات</item>
+        <item>عبس</item>
+        <item>التكوير</item>
+        <item>الإنفطار</item>
+        <item>المطففين</item>
+        <item>الإنشقاق</item>
+        <item>البروج</item>
+        <item>الطارق</item>
+        <item>الأعلى</item>
+        <item>الغاشية</item>
+        <item>الفجر</item>
+        <item>البلد</item>
+        <item>الشمس</item>
+        <item>الليل</item>
+        <item>الضحى</item>
+        <item>الشرح</item>
+        <item>التين</item>
+        <item>العلق</item>
+        <item>القدر</item>
+        <item>البينة</item>
+        <item>الزلزلة</item>
+        <item>العاديات</item>
+        <item>القارعة</item>
+        <item>التكاثر</item>
+        <item>العصر</item>
+        <item>الهمزة</item>
+        <item>الفيل</item>
+        <item>قريش</item>
+        <item>الماعون</item>
+        <item>الكوثر</item>
+        <item>الكافرون</item>
+        <item>النصر</item>
+        <item>المسد</item>
+        <item>الإخلاص</item>
+        <item>الفلق</item>
+        <item>الناس</item>
+    </string-array>
+    <string-array name="albaqarahList">
+        <item>الاول</item>
+        <item>الثانى</item>
+        <item>الثالث</item>
+        <item>السورة كاملة</item>
+    </string-array>
+    <string-array name="allLanguage">
+        <item>أختار اللغة</item>
+        <item>العربية (Arabic)</item>
+        <item>English(الانجليزية)</item>
+        <item>Français(الفرنسية)</item>
+    </string-array>
+    <string-array name="allLanguageAbbreviation">
+        <item>ar</item>
+        <item>en</item>
+        <item>fr</item>
+    </string-array>
+
+    <string name="surahDescription">شرح السورة</string>
+    <string name="moreInfoButton">معلومات اضافية عن السورة</string>
+    <string name="title_activity_map_fullscreen">خريطة السورة</string>
+    <string name="surahMapDescription">Map of selected surah</string>
+
+    <string-array name="goalOfSurah">
+        <item>حاوية أهداف القرآن</item>
+        <item>أنت مسؤول عن الأرض</item>
+        <item>الثبات على المنهج</item>
+        <item>العدل والرحمة خاصة مع الضعفاء</item>
+        <item>أوفوا بالعقود</item>
+        <item>توحيد الله تعالى في الاعتقاد والتطبيق</item>
+        <item>احسم موقفك في الصراع بين الحق والباطل</item>
+        <item>قوانين النصر مادية وربانية</item>
+        <item>التوبة</item>
+        <item>الإيمان بالقضاء والقدر</item>
+        <item>التوازن في الثبات على الحق دون ركون أو تهور</item>
+        <item>ثق بتدبير الله، واصبر ولا تيأس</item>
+        <item>قوة الحق وضعف الباطل</item>
+        <item>نعمة الإيمان ونقمة الكفر</item>
+        <item>حفظ الله لدينه</item>
+        <item>نعم الله تعالى</item>
+        <item>استشعر قيمة القرآن</item>
+        <item>العصمة من الفتن</item>
+        <item>توريث الدين للأبناء</item>
+        <item>الاسلام منهج السعادة</item>
+        <item>دور الأنبياء في تذكرة البشرية</item>
+        <item>دور الحج في بناء الأمة</item>
+        <item>صفات المؤمنين</item>
+        <item>شرع الله نور المجتمع</item>
+        <item>التحذير من سوء عاقبة المكذبين</item>
+        <item>دور الإعلام في توصيل رسالة الاسلام</item>
+        <item>أهمية التفوق الحضاري</item>
+        <item>الثقة بوعد الله</item>
+        <item>احذر من الفتن</item>
+        <item>آيات الله ظاهرة وواضحة، فكيف لا تؤمنون</item>
+        <item>تربية الأبناء</item>
+        <item>الخضوع لله تعالى</item>
+        <item>الاستسلام لله في المواقف الحرجة</item>
+        <item>الاستسلام لله سبيل بقاء الحضارات</item>
+        <item>الاستسلام لله سبيل العزة</item>
+        <item>الاستسلام لله بالاصرار على الدعوة حتى لو يئست من النتيجة</item>
+        <item>الاستسلام لله وإن لم تفهم الحكمة من أوامره</item>
+        <item>الاستسلام لله بالعودة إلى الحق دون عناد</item>
+        <item>الاخلاص لله تعالى</item>
+        <item>أهمية الدعوة إلى الله وتفويض الأمر إليه</item>
+        <item>حسن الاستقبال لأوامر الله تعالى</item>
+        <item>التحذير من الفرقة، والأمر بالشورى</item>
+        <item>التحذير من الانبهار بالمظاهر المادية</item>
+        <item>التحذير من الانبهار بالسلطة والتمكين</item>
+        <item>التحذير من التكبر والتعالي</item>
+        <item>نماذج لمن أجاب ولمن رفض أوامر الله</item>
+        <item>طاعة النبي صلى الله عليه وسلم مقياس قبول الأعمال</item>
+        <item>سورة الفتوحات والتجليات الربانية</item>
+        <item>أدب العلاقات</item>
+        <item>الاختيار بين الهدى والضلال</item>
+        <item>العطاء والمنع بيد الله ففروا إلى الله</item>
+        <item>الاختيار بين طريق الجنة وطريق النار</item>
+        <item>اختر مصدر معلوماتك</item>
+        <item>التعرف على الله تعالى من خلال نقمه</item>
+        <item>التعرف على الله تعالى من خلال نعمه</item>
+        <item>وكنتم أزواجاً ثلاثة</item>
+        <item>التوازن بين المادية والروحانية</item>
+        <item>التبرؤ من المناهج الأخرى والاتصال بالاسلام</item>
+        <item>مواقف مختلفة من الانتماء لدين الله</item>
+        <item>امتحانات الانتماء</item>
+        <item>أهمية وحدة الصف</item>
+        <item>دور صلاة الجمعة في الانتماء</item>
+        <item>خطر النفاق</item>
+        <item>مشاغل اجتماعية تضيع الانتماء</item>
+        <item>لا للخلاف</item>
+        <item>دور المرأة في تحقيق الانتماء لدين الله</item>
+        <item>الدعوة إلى الله</item>
+        <item>الدعوة إلى الله</item>
+        <item>الدعوة إلى الله</item>
+        <item>الدعوة إلى الله</item>
+        <item>الدعوة إلى الله</item>
+        <item>الدعوة إلى الله</item>
+        <item>الدعوة إلى الله</item>
+        <item>الدعوة إلى الله</item>
+        <item>الدعوة إلى الله</item>
+        <item>الدعوة إلى الله</item>
+        <item>الدعوة إلى الله</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+        <item>ختام المنهج الرباني</item>
+    </string-array>
+    <string-array name="reasonForNaming">
+        <item>فاتحة الكتاب</item>
+        <item>قصة البقرة جسدت الاخطاء الرئيسية لبني اسرائيل</item>
+        <item>امرأة عمران ومريم رموز الثبات على المنهج</item>
+        <item>النساء رمز الضعفاء</item>
+        <item>المائدة رمز لعهد قطعه قوم عيسى مع الله عز وجل</item>
+        <item>الانعام رمز لاحد اخطاء التطبيق في العقيدة</item>
+        <item>نسبة لاصحاب الاعراف فهم قوم ترددوا ولم يحسموا موقفهم في الدنيا فتعلقوا في الاخرة</item>
+        <item>الانفال اشارة الى الدنيا لنحذر التنافس عليها فهي من اكثر مايضيع النصر ويسبب الخلاف</item>
+        <item>موضوعها الاساسي التوبة وذكر فيها توبة الله على النبي والمهاجرين والانصار والثلاثة الذين خلفوا</item>
+        <item>قوم يونس مثال شاهد لفهم حكمة الله في قضائه وقدره حيث تقبل منهم توبتهم ولم يتقبل من قوم فرعون</item>
+        <item>قصة هود مع قومه جسدت هدف السورة بوضوح</item>
+        <item>عرض لقصة نبي الله يوسف عليه السلام</item>
+        <item>الرعد نموذج للتناقض يظهر الخوف ولكنه يحمل المطر ، صوته رهيب ولكنه يسبح الله عز وجل ، فالرسالة الا ننخدع بظاهر الاشياء بل ننظر لباطنها وكذلك الحق والباطل</item>
+        <item>ابراهيم عليه السلام نموذج لاهل الايمان</item>
+        <item>الحجر رمز لقوة الحضارات لنحذر من الانبهار بالاخرين ولتاكيد انه لاحافظ الا الله</item>
+        <item>مملكة النحل تمثل نموذج لتوظيف النعم لطاعة الله عزوجل</item>
+        <item>رحلة الاسراء من المسجد الحرام الى المسجد الاقصى تجسد انتقال الوحي والرسالة من بني اسرائيل الى امة محمد</item>
+        <item>الجا للكهف وسوف يعصمك من الفتنة</item>
+        <item>مريم نموذج لام ورثت الدين لابنها ولان الام هي المورث الحقيقي للدين</item>
+        <item></item>
+        <item>ورد فيها ذكر جملة من الانبياء</item>
+        <item>ذكر الحج واركانه</item>
+        <item>ذكر فيها صفات المومنين</item>
+        <item>ذكر فيها تفاصيل الشرع التي هي نور  من الله  نور السماوات والارض</item>
+        <item>الدين والقران هما الفرقان بين الحق والباطل</item>
+        <item>الشعر اقوى وسائل الاعلام في عهد النبي عليه الصلاة و السلام</item>
+        <item>النمل نموذج لامة تفوقت حضاريا</item>
+        <item>لو تتبعنا القصص في السورة الى نهايتها لوجدنا ان وعد الله في كل واحدة منها تحقق وان العاقبة للمتقين</item>
+        <item>تداخل الفتن يشبه خيوط العنكبوت</item>
+        <item>انتصار الروم نموذج لاية اخبر بها القران</item>
+        <item>لقمان نموذج لاب ومربي قدوة</item>
+        <item>السجدة رمز الخضوع والتسليم</item>
+        <item>موقف الاحزاب رمز  للمواقف الحرجة التي استسلم فيها المومنين لله عز وجل</item>
+        <item>سبا نموذج لحضارة سقطت بسبب عدم استسلامها لله عز وجل</item>
+        <item>عظمة الله عز وجل الذي فطر الاضداد (ازدواجية الكون) </item>
+        <item></item>
+        <item>الملائكة التي تصطف بين يدي الله استسلاما له</item>
+        <item></item>
+        <item>اكثر مايعينك على الاخلاص , زمرة صالحة ، ذكر زمرة الجنة وزمرة النار</item>
+        <item>لايمنعك الذنب من الدعوة فالله غافر الذنب</item>
+        <item>كتاب الله  فصلت اياته  احسن تفصيل</item>
+        <item>ذكر  الدعوة  والامر بالشورى</item>
+        <item>الزخرف رمز المظاهر المادية</item>
+        <item>ذكر الدخان كاحد علامات الساعة الكبرى , السلطة والتمكين  كالدخان تعمي اصحابها  عن الحق</item>
+        <item>ذكر يوم القيامة التي تجثو فيه الامم التي تكبرت واستعلت</item>
+        <item>الاحقاف منازل قوم عاد  نموذج لقوم رفضوا اوامر الله</item>
+        <item>تعرض اهمية طاعة النبي عليه الصلاة و السلام</item>
+        <item>ذكر فتح الله على نبيه بصلح الحديبية</item>
+        <item>احترام حرمة الحجرات رمز للتادب مع النبي عليه الصلاة و السلام</item>
+        <item></item>
+        <item>الرياح (الذاريات ) تحمل رزق الله عزوجل من مطر وغيره</item>
+        <item>الطورمكان تلقى فيه موسى الحق من ربه واختار طريقه</item>
+        <item>اختر نجمك التي تتلقى منه</item>
+        <item>الاشارة  لقصة انشقاق القمر</item>
+        <item>عرض لنعم الله عزوجل الرحمن</item>
+        <item>الاشارة ليوم القيامة  واحداثه</item>
+        <item>الحديد رمز للتوازن في الاخذ بالاسباب في سبيل الرسالة</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="surahMapURLOnFacebook">
+        <item>https://www.facebook.com/photo.php?fbid=591819277542187</item>
+        <item>https://www.facebook.com/photo.php?fbid=386322398091877</item>
+        <item>https://www.facebook.com/photo.php?fbid=380767678647349</item>
+        <item>https://www.facebook.com/photo.php?fbid=377164279007689</item>
+        <item>https://www.facebook.com/photo.php?fbid=377536225637161</item>
+        <item>https://www.facebook.com/photo.php?fbid=378106392246811</item>
+        <item>https://www.facebook.com/photo.php?fbid=378660725524711</item>
+        <item>https://www.facebook.com/photo.php?fbid=379174568806660</item>
+        <item>https://www.facebook.com/photo.php?fbid=379738885416895</item>
+        <item>https://www.facebook.com/photo.php?fbid=380255125365271</item>
+        <item>https://www.facebook.com/photo.php?fbid=381372091920241</item>
+        <item>https://www.facebook.com/photo.php?fbid=375004512556999</item>
+        <item>https://www.facebook.com/photo.php?fbid=381870978537019</item>
+        <item>https://www.facebook.com/photo.php?fbid=381871555203628</item>
+        <item>https://www.facebook.com/photo.php?fbid=382372975153486</item>
+        <item>https://www.facebook.com/photo.php?fbid=383029015087882</item>
+        <item>https://www.facebook.com/photo.php?fbid=400701206653996</item>
+        <item>https://www.facebook.com/photo.php?fbid=375005839223533</item>
+        <item>https://www.facebook.com/photo.php?fbid=375006449223472</item>
+        <item>https://www.facebook.com/photo.php?fbid=375006449223472</item>
+        <item>https://www.facebook.com/photo.php?fbid=389999144390869</item>
+        <item>https://www.facebook.com/photo.php?fbid=390571914333592</item>
+        <item>https://www.facebook.com/photo.php?fbid=391112764279507</item>
+        <item>https://www.facebook.com/photo.php?fbid=383524211705029</item>
+        <item>https://www.facebook.com/photo.php?fbid=386943941363056</item>
+        <item>https://www.facebook.com/photo.php?fbid=387973537926763</item>
+        <item>https://www.facebook.com/photo.php?fbid=388343981223052</item>
+        <item>https://www.facebook.com/photo.php?fbid=375017632555687</item>
+        <item>https://www.facebook.com/photo.php?fbid=388855354505248</item>
+        <item>https://www.facebook.com/photo.php?fbid=375018765888907</item>
+        <item>https://www.facebook.com/photo.php?fbid=375019129222204</item>
+        <item>https://www.facebook.com/photo.php?fbid=375019299222187</item>
+        <item>https://www.facebook.com/photo.php?fbid=375019699222147</item>
+        <item>https://www.facebook.com/photo.php?fbid=399899266734190</item>
+        <item>https://www.facebook.com/photo.php?fbid=399899806734136</item>
+        <item>https://www.facebook.com/photo.php?fbid=399900470067403</item>
+        <item>https://www.facebook.com/photo.php?fbid=399900663400717</item>
+        <item>https://www.facebook.com/photo.php?fbid=399900793400704</item>
+        <item>https://www.facebook.com/photo.php?fbid=400774329980017</item>
+        <item>https://www.facebook.com/photo.php?fbid=400774653313318</item>
+        <item>https://www.facebook.com/photo.php?fbid=587325324658249</item>
+        <item>https://www.facebook.com/photo.php?fbid=587325264658255</item>
+        <item>https://www.facebook.com/photo.php?fbid=587325261324922</item>
+        <item>https://www.facebook.com/photo.php?fbid=587325237991591</item>
+        <item>https://www.facebook.com/photo.php?fbid=587325131324935</item>
+        <item>https://www.facebook.com/photo.php?fbid=587325127991602</item>
+        <item>https://www.facebook.com/photo.php?fbid=587325311324917</item>
+        <item>https://www.facebook.com/photo.php?fbid=587325287991586</item>
+        <item>https://www.facebook.com/photo.php?fbid=587325124658269</item>
+        <item>https://www.facebook.com/photo.php?fbid=587325304658251</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797494811032</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797544811027</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797618144353</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797568144358</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797501477698</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797638144351</item>
+        <item>https://www.facebook.com/photo.php?fbid=587325244658257</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797578144357</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797504811031</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797584811023</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797531477695</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797428144372</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797604811021</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797421477706</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797538144361</item>
+        <item>https://www.facebook.com/photo.php?fbid=585797424811039</item>
+        <item>https://www.facebook.com/photo.php?fbid=578652672192181</item>
+        <item>https://www.facebook.com/photo.php?fbid=578652675525514</item>
+        <item>https://www.facebook.com/photo.php?fbid=578652668858848</item>
+        <item>https://www.facebook.com/photo.php?fbid=579060498818065</item>
+        <item>https://www.facebook.com/photo.php?fbid=578652702192178</item>
+        <item>https://www.facebook.com/photo.php?fbid=583201255070656</item>
+        <item>https://www.facebook.com/photo.php?fbid=583201301737318</item>
+        <item>https://www.facebook.com/photo.php?fbid=583201288403986</item>
+        <item>https://www.facebook.com/photo.php?fbid=583201258403989</item>
+        <item>https://www.facebook.com/photo.php?fbid=583201251737323</item>
+        <item>https://www.facebook.com/photo.php?fbid=583201291737319</item>
+        <item>https://www.facebook.com/photo.php?fbid=442733905784059</item>
+        <item>https://www.facebook.com/photo.php?fbid=442733975784052</item>
+        <item>https://www.facebook.com/photo.php?fbid=442733992450717</item>
+        <item>https://www.facebook.com/photo.php?fbid=442734009117382</item>
+        <item>https://www.facebook.com/photo.php?fbid=443105325746917</item>
+        <item>https://www.facebook.com/photo.php?fbid=443105385746911</item>
+        <item>https://www.facebook.com/photo.php?fbid=443105412413575</item>
+        <item>https://www.facebook.com/photo.php?fbid=579060428818072</item>
+        <item>https://www.facebook.com/photo.php?fbid=579060458818069</item>
+        <item>https://www.facebook.com/photo.php?fbid=579060425484739</item>
+        <item>https://www.facebook.com/photo.php?fbid=579060462151402</item>
+        <item>https://www.facebook.com/photo.php?fbid=579060485484733</item>
+        <item>https://www.facebook.com/photo.php?fbid=579060432151405</item>
+        <item>https://www.facebook.com/photo.php?fbid=578651052192343</item>
+        <item>https://www.facebook.com/photo.php?fbid=578651078859007</item>
+        <item>https://www.facebook.com/photo.php?fbid=578651055525676</item>
+        <item>https://www.facebook.com/photo.php?fbid=578651048859010</item>
+        <item>https://www.facebook.com/photo.php?fbid=578650738859041</item>
+        <item>https://www.facebook.com/photo.php?fbid=539246066132842</item>
+        <item>https://www.facebook.com/photo.php?fbid=539246169466165</item>
+        <item>https://www.facebook.com/photo.php?fbid=539245976132851</item>
+        <item>https://www.facebook.com/photo.php?fbid=539245979466184</item>
+        <item>https://www.facebook.com/photo.php?fbid=539246049466177</item>
+        <item>https://www.facebook.com/photo.php?fbid=539246156132833</item>
+        <item>https://www.facebook.com/photo.php?fbid=539245972799518</item>
+        <item>https://www.facebook.com/photo.php?fbid=538859192838196</item>
+        <item>https://www.facebook.com/photo.php?fbid=538859232838192</item>
+        <item>https://www.facebook.com/photo.php?fbid=538859196171529</item>
+        <item>https://www.facebook.com/photo.php?fbid=538859239504858</item>
+        <item>https://www.facebook.com/photo.php?fbid=538859229504859</item>
+        <item>https://www.facebook.com/photo.php?fbid=538859199504862</item>
+        <item>https://www.facebook.com/photo.php?fbid=538420106215438</item>
+        <item>https://www.facebook.com/photo.php?fbid=538420152882100</item>
+        <item>https://www.facebook.com/photo.php?fbid=538420142882101</item>
+        <item>https://www.facebook.com/photo.php?fbid=538420102882105</item>
+        <item>https://www.facebook.com/photo.php?fbid=538420109548771</item>
+        <item>https://www.facebook.com/photo.php?fbid=538420149548767</item>
+    </string-array>
+
+    <string-array name="surahMapURLOnFacebook_AlbaqarahList">
+        <item>https://www.facebook.com/photo.php?fbid=402521626471954</item>
+        <item>https://www.facebook.com/photo.php?fbid=402521836471933</item>
+        <item>https://www.facebook.com/photo.php?fbid=402521859805264</item>
+        <item>https://www.facebook.com/photo.php?fbid=386322398091877</item>
+    </string-array>
+
+    <string-array name="referances">
+        <item>مصحف التفصيل الموضوعي الملون - دار الفجر الإسلامي - رواية حفص عن عاصم</item>
+        <item>خواطر قرآنية: نظرات في أهداف سور القرآن , عمرو خالد , الترقم الدولى
+            6222007202469 (ISBN)</item>
+        <item>التفسير الموضوعي لسور القرآن الكريم / إعداد نخبة من علماء التفسير وعلوم القرآن بإشراف الأستاذ الدكتور مصطفى مسلم
+            9948100700 (ISBN)</item>
+    </string-array>
+
+    <string-array name="usefuLinksNames">
+        <item>القرآن الكريم - مشروع المصحف الإلكتروني بجامعة الملك سعود</item>
+        <item>صفحة خرائط القرآن على الفيس بوك</item>
+        <item>موقع الاسلام سؤال و جواب</item>
+        <item>موقع الايمان اولا - تربية ايمانية - د مجدى الهلالى</item>
+        <item>مؤسسة جسور للتعريف بالأسلام</item>
+    </string-array>
+
+    <string-array name="usefuLinksURL">
+        <item>http://quran.ksu.edu.sa</item>
+        <item>https://www.facebook.com/QuranMap</item>
+        <item>http://islamqa.info</item>
+        <item>http://www.alemanawalan.com</item>
+        <item>http://www.bridges-foundation.org</item>
+    </string-array>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_surah_map">SurahMapActivity</string>
+
+</resources>
