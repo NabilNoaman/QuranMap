@@ -1,6 +1,7 @@
 package com.quranmap.android.activity;
 
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
@@ -26,7 +27,9 @@ public class About extends AppCompatActivity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_about);
-		
+
+		getSupportActionBar().setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.actionbar_background));
+
 		referancesListTV =  (TextView) findViewById(R.id.referancesList);
 		usefulLinksListTV =  (TextView) findViewById(R.id.usefuLinksList);
 		

@@ -12,12 +12,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.quranmap.android.R;
@@ -40,10 +42,20 @@ public class SurahMapActivity extends AppCompatActivity {
     private int selectedSurahIndex = -1;
     private int mapResourceID = R.drawable.splash;
 
+    private String[] allSurahsGoal = null;
+    private String[] allSurahsReasonOfNaming =null;
+
+    private TextView goalOfSurahTV    = null;
+    private TextView reasonOfNamingTV = null;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_surah_map);
+
+        getSupportActionBar().setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.actionbar_background));
+
         mapIV = (ImageView) findViewById(R.id.surah_map);
         // Attach a PhotoViewAttacher, which takes care of all of the zooming functionality.
         mAttacher = new PhotoViewAttacher(mapIV);
@@ -81,11 +93,38 @@ public class SurahMapActivity extends AppCompatActivity {
         mapIV.setImageResource(mapResourceID);
         mAttacher.update();
 
+        //------
+
+
+        allSurahsGoal = getResources().getStringArray(R.array.goalOfSurah);
+        allSurahsReasonOfNaming = getResources().getStringArray(R.array.reasonForNaming);
+
+        goalOfSurahTV = (TextView) findViewById(R.id.goalOfSurahTV);
+        reasonOfNamingTV = (TextView) findViewById(R.id.reasonOfNamingTV);
+
+        goalOfSurahTV.setText(allSurahsGoal[selectedSurahIndex]);
+        reasonOfNamingTV.setText(allSurahsReasonOfNaming[selectedSurahIndex]);
+
         //Arabic font for phones that did not contains arabic support
         //==================================================================================
         if(MainActivity.language.equalsIgnoreCase("ar")){
+            for(int i=0 ; i < allSurahsGoal.length ; i++){
+                allSurahsGoal[i]= ArabicUtilities.reshapeSentence(allSurahsGoal[i]);
+                allSurahsReasonOfNaming[i]= ArabicUtilities.reshapeSentence(allSurahsReasonOfNaming[i]);
+            }
+
             surahName = ArabicUtilities.reshapeSentence(surahName);
+
+            ((TextView)findViewById(R.id.goalOfSurahLabel)).setText(ArabicUtilities.reshapeSentence(getString(R.string.goalOfSurahLabel)));
+            ((TextView)findViewById(R.id.reasonOfNamingLabel)).setText(ArabicUtilities.reshapeSentence(getString(R.string.reasonOfNamingLabel)));
+            goalOfSurahTV.setText(allSurahsGoal[selectedSurahIndex]);
+            reasonOfNamingTV.setText(allSurahsReasonOfNaming[selectedSurahIndex]);
+
         }
+
+
+        //-------
+
 
         setTitle(surahName);
 
@@ -141,12 +180,6 @@ public class SurahMapActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_details) {
-            Intent intent = new Intent(SurahMapActivity.this, SurahDetails.class);
-            intent.putExtra(MainActivity.SELECTED_SURAH_INDEX_KEY, selectedSurahIndex);
-            startActivity(intent);
-            return true;
-        }
 
         if (id == R.id.action_share) {
             setShareIntent();
@@ -162,12 +195,6 @@ public class SurahMapActivity extends AppCompatActivity {
                 //display dialog indicates this version of android does not support required feature
                 indicateToUserFeatureNotAvailable();
             }
-            return true;
-        }
-
-        if (id == R.id.action_about) {
-            Intent intent = new Intent(SurahMapActivity.this, About.class);
-            startActivity(intent);
             return true;
         }
 
@@ -253,7 +280,7 @@ public class SurahMapActivity extends AppCompatActivity {
                         }
                     });
 
-            Toast.makeText(getApplicationContext(), getResources().getString(R.string.map_image_extracted) + " in Path:" + file.getPath(), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), getResources().getString(R.string.map_image_extracted)/* + " in Path:" + file.getPath()*/, Toast.LENGTH_LONG).show();
         } catch (IOException e) {
             // Unable to create file, likely because external storage is
             // not currently mounted.

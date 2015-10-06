@@ -37,15 +37,6 @@
 
 
         <activity
-            android:name=".activity.SurahDetails"
-            android:label="@string/title_activity_surah_details"
-            android:parentActivityName=".activity.SurahMapActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.SurahMapActivity" />
-        </activity>
-
-        <activity
             android:name=".activity.About"
             android:configChanges="orientation|keyboardHidden|screenSize|locale"
             android:label="@string/title_activity_about"

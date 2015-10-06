@@ -3,12 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.quranmap.android.activity.SurahMapActivity">
 
-    <item android:id="@+id/action_details"
-        android:title="@string/menu_Details"
-        android:icon="@drawable/details_light"
-        android:orderInCategory="100"
-        app:showAsAction="always" />
-
     <item android:id="@+id/action_share"
         android:title="@string/menu_share"
         android:icon="@drawable/share_light"
@@ -17,15 +11,9 @@
 
     <item
         android:id="@+id/action_extract"
-        android:icon="@android:drawable/ic_menu_save"
+        android:icon="@drawable/ic_action_save"
         app:showAsAction="ifRoom"
         android:title="@string/menu_extract"/>
 
-
-    <item android:id="@+id/action_about"
-        android:title="@string/menu_about"
-        android:icon="@drawable/about_light"
-        android:orderInCategory="100"
-        app:showAsAction="ifRoom" />
 
 </menu>

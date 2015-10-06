@@ -16,11 +16,10 @@
     <string name="menu_about">عن البرنامج</string>
     <string name="menu_exit">خروج</string>
     <string name="menu_home">Home</string>
-    <string name="menu_extract">أستخرج الى كارت الذاكرة</string>
     <string name="title_activity_surah_details">التفاصيل</string>
     <string name="title_activity_share">مشاركة</string>
     <string name="title_activity_about">عن خرائط القرآن</string>
-    <string name="map_image_extracted">تم استخراج الخريطة الحالية لكارت الذاكرة </string>
+    <string name="map_image_extracted">تم حفظ الخريطة في البوم الصور</string>
     <string name="title_feature_Not_Available_Dialog">غير متوفرة</string>
     <string name="message_feature_Not_Available_Dialog">الخاصية المطلوبة غير متوفرة فى النسخة الحالية للأندرويد الحالى على هذا الجهاز</string>
 
@@ -568,5 +567,6 @@
 
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_surah_map">SurahMapActivity</string>
+    <string name="menu_extract">حفظ في البوم الصور</string>
 
 </resources>
