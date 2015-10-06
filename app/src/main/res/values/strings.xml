@@ -568,5 +568,7 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_surah_map">SurahMapActivity</string>
     <string name="menu_extract">حفظ في البوم الصور</string>
+    <string name="wait">    آنتظر</string>
+
 
 </resources>

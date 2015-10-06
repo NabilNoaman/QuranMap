@@ -42,6 +42,7 @@ public class SurahMapActivity extends AppCompatActivity {
     private int selectedSurahIndex = -1;
     private int mapResourceID = R.drawable.splash;
 
+    private String surahName;
     private String[] allSurahsGoal = null;
     private String[] allSurahsReasonOfNaming =null;
 
@@ -65,7 +66,7 @@ public class SurahMapActivity extends AppCompatActivity {
 
     private void loadSelectedSurahMap(Intent intent) {
         String mapNameAsInDrawable = "";
-        String surahName;
+
 
         SharedPreferences sp;
         SharedPreferences.Editor editor;
@@ -209,7 +210,17 @@ public class SurahMapActivity extends AppCompatActivity {
         // Construct a ShareIntent with link to image
         shareIntent.setAction(Intent.ACTION_SEND);
         shareIntent.setType("*/*");
-        shareIntent.putExtra(Intent.EXTRA_TEXT, getTitle());
+        String shareString = surahName;
+        if( allSurahsGoal[selectedSurahIndex] != null && allSurahsGoal[selectedSurahIndex].length() != 0 ) {
+            shareString  = shareString +"\n"+ getString(R.string.goalOfSurahLabel) + "\n" + allSurahsGoal[selectedSurahIndex];
+        }
+
+        if( allSurahsReasonOfNaming[selectedSurahIndex] != null && allSurahsReasonOfNaming[selectedSurahIndex].length() !=0 ){
+            shareString  = shareString +"\n"+ getString(R.string.reasonOfNamingLabel) + "\n" + allSurahsReasonOfNaming[selectedSurahIndex];
+        }
+
+        shareIntent.putExtra(Intent.EXTRA_TEXT, shareString);
+
         shareIntent.putExtra(Intent.EXTRA_STREAM, bmpUri);
         // Launch share menu
         startActivity(Intent.createChooser(shareIntent, getString(R.string.menu_share)));
