@@ -209,18 +209,22 @@ public class SurahMapActivity extends AppCompatActivity {
         Intent shareIntent = new Intent();
         // Construct a ShareIntent with link to image
         shareIntent.setAction(Intent.ACTION_SEND);
-        shareIntent.setType("*/*");
-        String shareString = surahName;
+        shareIntent.setType("text/html");
+        StringBuilder shareString = new StringBuilder(getResources().getString(R.string.surah_label)+ " " +surahName);
         if( allSurahsGoal[selectedSurahIndex] != null && allSurahsGoal[selectedSurahIndex].length() != 0 ) {
-            shareString  = shareString +"\n"+ getString(R.string.goalOfSurahLabel) + "\n" + allSurahsGoal[selectedSurahIndex];
+            shareString.append("\n\n"+ getString(R.string.goalOfSurahLabel) + "\n" + allSurahsGoal[selectedSurahIndex]);
         }
 
         if( allSurahsReasonOfNaming[selectedSurahIndex] != null && allSurahsReasonOfNaming[selectedSurahIndex].length() !=0 ){
-            shareString  = shareString +"\n"+ getString(R.string.reasonOfNamingLabel) + "\n" + allSurahsReasonOfNaming[selectedSurahIndex];
+            shareString.append("\n\n"+ getString(R.string.reasonOfNamingLabel) + "\n" + allSurahsReasonOfNaming[selectedSurahIndex]);
         }
 
-        shareIntent.putExtra(Intent.EXTRA_TEXT, shareString);
+        // url for Quran Map on Google Play
+        String googlePlayLinkForAPP = getResources().getString(R.string.google_play_app_link);
+        String sharedBy = getResources().getString(R.string.shared_by)+ "\n" + googlePlayLinkForAPP;
 
+        shareString.append( "\n\n" + sharedBy);
+        shareIntent.putExtra(Intent.EXTRA_TEXT, shareString.toString());
         shareIntent.putExtra(Intent.EXTRA_STREAM, bmpUri);
         // Launch share menu
         startActivity(Intent.createChooser(shareIntent, getString(R.string.menu_share)));
@@ -236,12 +240,15 @@ public class SurahMapActivity extends AppCompatActivity {
         } else {
             return null;
         }
-        // Store image to default external storage directory
+        // Store image to Picture directory
         Uri bmpUri = null;
         try {
             File file =  new File(Environment.getExternalStoragePublicDirectory(
-                    Environment.DIRECTORY_DOWNLOADS), "Quran_Map" + System.currentTimeMillis() + ".png");
+                    Environment.DIRECTORY_PICTURES  + "/QuranMap/"), "Quran Map_"+surahName+".png");
+
             file.getParentFile().mkdirs();
+
+
             FileOutputStream out = new FileOutputStream(file);
             bmp.compress(Bitmap.CompressFormat.PNG, 90, out);
             out.close();
@@ -261,7 +268,7 @@ public class SurahMapActivity extends AppCompatActivity {
         // pictures and other media owned by the application, consider
         // Context.getExternalMediaDir().
         File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES + "/QuranMap/");
-        File file = new File(path, mapName+".jpg");
+        File file = new File(path, mapName+".png");
 
         try {
             // Make sure the Pictures directory exists.

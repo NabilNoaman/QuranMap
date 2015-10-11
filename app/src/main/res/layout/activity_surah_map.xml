@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@android:color/white"
+        android:background="#d6f0f7"
         android:layout_alignParentBottom="true" >
 
         <TextView
@@ -29,7 +29,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/goalOfSurahLabel"
             android:textColor="@android:color/black"/>
@@ -61,6 +61,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:text="Reason Of Naming"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@android:color/darker_gray"/>

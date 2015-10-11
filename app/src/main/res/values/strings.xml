@@ -11,7 +11,7 @@
     <string name="noCurrentMapExist_TitleDialog">الخريطة غير متوفرة</string>
     <string name="alBaqarah_TitleDialog">أختار الجزء</string>
     <string name="menu_Details">تفاصيل</string>
-    <string name="menu_share">مشاركة</string>
+    <string name="menu_share">شارك</string>
     <string name="menu_reset">الوضع الطبيعى</string>
     <string name="menu_about">عن البرنامج</string>
     <string name="menu_exit">خروج</string>
@@ -569,6 +569,9 @@
     <string name="title_activity_surah_map">SurahMapActivity</string>
     <string name="menu_extract">حفظ في البوم الصور</string>
     <string name="wait">    آنتظر</string>
+    <string name="shared_by">يمكنك تحميل برنامج خارطه القرآن عن طريق هذا الرابط</string>
+    <string name="google_play_app_link">https://play.google.com/store/apps/details?id=com.quranmap.android</string>
+    <string name="surah_label">سورة</string>
 
 
 </resources>
