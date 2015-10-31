@@ -209,7 +209,7 @@ public class SurahMapActivity extends AppCompatActivity {
         Intent shareIntent = new Intent();
         // Construct a ShareIntent with link to image
         shareIntent.setAction(Intent.ACTION_SEND);
-        shareIntent.setType("text/html");
+        shareIntent.setType("*/*");
         StringBuilder shareString = new StringBuilder(getResources().getString(R.string.surah_label)+ " " +surahName);
         if( allSurahsGoal[selectedSurahIndex] != null && allSurahsGoal[selectedSurahIndex].length() != 0 ) {
             shareString.append("\n\n"+ getString(R.string.goalOfSurahLabel) + "\n" + allSurahsGoal[selectedSurahIndex]);
