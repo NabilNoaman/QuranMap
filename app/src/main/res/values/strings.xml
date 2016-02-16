@@ -573,5 +573,7 @@
     <string name="google_play_app_link">https://play.google.com/store/apps/details?id=com.quranmap.android</string>
     <string name="surah_label">سورة</string>
 
-
+    <string name="permission_denied">
+        لحفظ أو مشاركة خرائط القران ، يجب السماح للتطبيق بحفظ الصور في ذاكرة الجهاز
+    </string>
 </resources>

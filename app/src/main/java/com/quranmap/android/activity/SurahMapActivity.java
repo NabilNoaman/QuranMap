@@ -1,8 +1,10 @@
 package com.quranmap.android.activity;
 
+import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -12,6 +14,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -48,6 +51,7 @@ public class SurahMapActivity extends AppCompatActivity {
 
     private TextView goalOfSurahTV    = null;
     private TextView reasonOfNamingTV = null;
+    private static final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 1;
 
 
     @Override
@@ -190,8 +194,23 @@ public class SurahMapActivity extends AppCompatActivity {
         if (id == R.id.action_extract) {
             //first check if API version support access to SD card or not
             if(Build.VERSION.SDK_INT > Build.VERSION_CODES.FROYO)
-            {
-                createExternalStoragePublicPicture(MainActivity.allSurahsNames[selectedSurahIndex] , mapResourceID);
+            {// then check if SDK version requires request for permissions (sdk 23 and higher)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    // Then check if permission was granted
+                    if (ContextCompat.checkSelfPermission(this,
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                            != PackageManager.PERMISSION_GRANTED) {
+
+                            ActivityCompat.requestPermissions(this,
+                                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                    MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
+                    } else {
+                        createExternalStoragePublicPicture(MainActivity.allSurahsNames[selectedSurahIndex] , mapResourceID);
+                    }
+                } else {
+                    createExternalStoragePublicPicture(MainActivity.allSurahsNames[selectedSurahIndex] , mapResourceID);
+                }
+
             }else{
                 //display dialog indicates this version of android does not support required feature
                 indicateToUserFeatureNotAvailable();
@@ -325,5 +344,23 @@ public class SurahMapActivity extends AppCompatActivity {
         });
 
         alertDialog.show();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // permission was granted! Do the task
+                    createExternalStoragePublicPicture(MainActivity.allSurahsNames[selectedSurahIndex] , mapResourceID);
+
+                } else {
+                    Toast.makeText(getApplicationContext(), R.string.permission_denied, Toast.LENGTH_LONG).show();
+                }
+                return;
+            }
+        }
     }
 }
