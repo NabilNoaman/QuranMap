@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/nabilnoaman/QuranMap/app/build/intermediates/exploded-aar/com.commit451/PhotoView/1.2.4/jars/classes.jar"
+        jar="/Users/nabilnoaman/GitRepos/QuranMap/app/build/intermediates/exploded-aar/com.appsee/appsee-android/2.1.5/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="890be6e1e56a883c9b407a11e067a61886dec123">
-        <dex dex="/Users/nabilnoaman/QuranMap/app/build/intermediates/pre-dexed/debug/classes-56ea8f8c500c7fd54878a27fb281739e949a2fa9.jar" />
+        sha1="cce25aea2e92fb89bab84e85b52db8918d4f28e0">
+        <dex dex="/Users/nabilnoaman/GitRepos/QuranMap/app/build/intermediates/pre-dexed/debug/classes-1c0b7a7fa7aa888cb7e199aab32b9e185481592b.jar" />
     </item>
 
 </items>

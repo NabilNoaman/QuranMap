@@ -576,4 +576,5 @@
     <string name="permission_denied">
         لحفظ أو مشاركة خرائط القران ، يجب السماح للتطبيق بحفظ الصور في ذاكرة الجهاز
     </string>
+    <string name="com.appsee.apikey" translatable="false">d5d95992ed144fb08e5227b7b419374f</string>
 </resources>
